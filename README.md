@@ -4,3 +4,18 @@
 ER Diagram of database:
 
 ![](https://github.com/cirkovicstefan/Rent-a-car/blob/main/app_images/dijagram/sema.png)
+
+# Back-End
+C# was used in the back-end part of the project. Development was made on the basis of multi-layered architecture.
+
+
+![]([https://github.com/cirkovicstefan/Rent-a-car/blob/main/app_images/dijagram/sema.png](https://github.com/cirkovicstefan/Rent-a-car/blob/main/app_images/dijagram/Picture1.png)
+
+# Front-End
+
+Angular 14 was used in the front-end part of the project. Throughout the development, Visual Studio Code has been worked on as IDE. Bootstrap has been integrated to achieve a responsive design. Also used Font-Awesome. BrowserModule, HttpClientModule, AppRoutingModule, FormsModule, ReactiveFormsModule, BrowserAnimationsModule and ToastrModule were used as modules in Angular. 
+
+Role guest
+![](https://github.com/cirkovicstefan/Rent-a-car/blob/main/app_images/uloga%20gost/gost-prikaz.png)
+
+![](https://github.com/cirkovicstefan/Rent-a-car/blob/main/app_images/uloga%20gost/registracija.png)
