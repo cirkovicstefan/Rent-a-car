@@ -1,0 +1,58 @@
+<app-navbar-korisnik></app-navbar-korisnik>
+<div style="margin-top: 80px;">
+    <div class="col-md-12">
+        <div class="card" style="width:auto ;">
+    
+            <div class="card-header">
+                <h5 class="card-title text-center">Rezerviši auto</h5>
+            </div>
+    
+            <div class="card-body">
+    
+                <form [formGroup]="rezervacijaAddForm" >
+    
+    
+    
+                    <div class="mb-3 row">
+                        <label for="colorId" class="col-sm-2 col-form-label">Automobil: <span class="text-danger">*</span></label>
+                        <div class="col-sm-10">
+                            <input type="hidden" name="" class="form-control" formControlName="idAutomobila" *ngFor="let item of autoDetails" [ngModel]="item.idAutomobil">
+                            <select class="form-control" [disabled]="true">
+                                <option *ngFor="let item of autoDetails">
+                                 {{item.nazivProizvodjaca}} - {{item.nazivModela}}
+                                </option>
+                            </select>
+                        </div>
+                    </div>
+    
+                    <div class="mb-3 row">
+                        <label for="carName" class="col-sm-2 col-form-label"> Datum rezervacije : <span class="text-danger">*</span></label>
+                        <div class="col-sm-10">
+                            <input type="date" id=""  formControlName="datum" class="form-control" />
+                        </div>
+                    </div>
+    
+                    <div class="mb-3 row">
+                        <label for="korinik" class="col-sm-2 col-form-label">Korisnik: <span class="text-danger">*</span></label>
+                        <div class="col-sm-10">
+                            <select class="form-control" [ngModel]="korisnik!.idKorisnika"  formControlName="idKorisnika">
+                                <option value="{{korisnik!.idKorisnika}}">
+                                  {{korisnik!.ime}} - {{korisnik!.prezime}} 
+                                </option>
+                            </select>
+                        </div>
+                    </div>
+               
+                    <!-- <input type="hidden" formControlName="idRezervacije" [ngModel]="rezervacija.idRezervacije"> -->
+             
+    
+                </form>
+    
+            </div>
+    
+            <div class="card-footer text-center">
+                <button class="btn btn-success px-5" (click)="Rezervisi()">Rezervisi</button>
+            </div>
+    
+        </div>
+    </div></div>

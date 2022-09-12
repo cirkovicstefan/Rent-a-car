@@ -1,0 +1,126 @@
+<aside class="sidebar">
+  <div class="toggle">
+    <a href="#" class="burger js-menu-toggle" data-toggle="collapse" data-target="#main-navbar">
+      <span></span>
+    </a>
+  </div>
+  <div class="side-inner">
+
+    <div class="profile">
+      <img src="../../../assets/ikonice/user128.png"
+        alt="Image" class="img-fluid">
+
+      <h3 class="name">{{ime}} {{prezime}}</h3>
+      <h3></h3>
+      <h3 class="name">{{email}}</h3>
+
+      <!-- <button type="button" routerLink="profil" class="btn btn-primary btn-sm mt-3">Profile</button> -->
+
+    </div>
+
+
+
+    <ul class="nav nav-pills flex-column mb-auto">
+      <!-- <li class="nav-item">
+        <a routerLink="/pocetna" class="nav-link link-dark">
+          <img src="../../assets/ikonice/home.png" alt="Početna">&nbsp;&nbsp;
+          Početna
+        </a>
+      </li> -->
+      <li class="nav-item">
+        <a routerLink="auto" class="nav-link link-dark">
+          <img src="../../assets/ikonice/iznjamljivanje.png" alt="auto">
+          Iznajmljivanje
+        </a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="prikaz-korisnika" class="nav-link link-dark">
+          <img src="../../assets/ikonice/klijent.png" alt="auto">
+          Korisnici
+        </a>
+      </li>
+
+     
+      <li>
+
+        <button class="btn btn-toggle w-100 align-items-center rounded collapsed nav-link link-dark"
+          data-bs-toggle="collapse" data-bs-target="#orders-collapse3" aria-expanded="false">
+          <img src="../../../assets/ikonice/car-rental.png" alt="auto">
+          &nbsp;&nbsp; Iznajmljeni
+        </button>
+        <div class="collapse" id="orders-collapse3">
+          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+            <li><a class="link-dark rounded">
+                <a routerLink="lista-iznjmljenih" class="nav-link link-dark">
+                  <img src="../../../assets/ikonice/car-rental.png" alt="auto">
+                  &nbsp;&nbsp;Iznajmljeni
+                </a>
+              </a></li>
+            <li><a class="link-dark rounded">
+                <a routerLink="lista-istorija" class="nav-link link-dark">
+                  <img src="../../../assets/ikonice/history.png" width="24" height="24" alt="auto">
+                  &nbsp;&nbsp; Istorija iznajmljivanja
+                </a>
+              </a></li>
+
+
+          </ul>
+        </div>
+
+
+
+
+
+      </li>
+      <li class="mb-1">
+        <button class="btn btn-toggle w-100 align-items-center rounded collapsed nav-link link-dark"
+          data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-expanded="false">
+          <img src="../../assets/ikonice/auto.png" alt="auto">
+          &nbsp;&nbsp;Automobili
+        </button>
+        <div class="collapse" id="dashboard-collapse">
+          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+            <li><a class="link-dark rounded">
+                <a routerLink="auto-list" class="nav-link link-dark">
+                  <img src="../../assets/ikonice/auto.png" width="24" height="24" alt="auto">
+                  &nbsp;&nbsp;Automobil
+                </a>
+              </a></li>
+            <li><a class="link-dark rounded">
+                <a routerLink="prikaz-modela" class="nav-link link-dark">
+                  <img src="../../assets/ikonice/model.png" width="24" height="24" alt="auto">
+                  &nbsp;&nbsp; Model
+                </a>
+              </a></li>
+            <li><a class="link-dark rounded">
+                <a routerLink="prikaz-proizvodjaca" class="nav-link link-dark">
+                  <img src="../../assets/ikonice/proizvodjac.png" width="24" height="24" alt="auto">
+                  &nbsp;&nbsp; Proizvodjača</a>
+
+              </a></li>
+
+          </ul>
+        </div>
+      </li>
+
+      <li>
+        <a routerLink="lista-rezervacija" class="nav-link link-dark">
+          <img src="../../../assets/ikonice/reserve.png" alt="finansije">
+          &nbsp;&nbsp;Rezervacije</a>
+      </li>
+      <li>
+        <a routerLink="prikaz-cena" class="nav-link link-dark">
+          <img src="../../assets/ikonice/finansije.png" alt="finansije">
+          &nbsp;&nbsp;Finansije</a>
+      </li>
+
+    </ul>
+    <hr>
+   
+        <a (click)="odjaviSe()" class="nav-link link-dark">
+          <img src="../../../assets/ikonice/logout.png" alt="finansije">
+          &nbsp;&nbsp;Odjavi se</a>
+    
+  </div>
+
+</aside>

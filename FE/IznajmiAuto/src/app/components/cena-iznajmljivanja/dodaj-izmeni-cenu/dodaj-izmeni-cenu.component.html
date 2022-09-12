@@ -1,0 +1,56 @@
+
+<div class="col-md-12">
+    <div class="card">
+
+        <!--  <div class="card-header">
+            <h5 class="card-title text-center">Dodaj auto</h5>
+        </div> -->
+
+        <div class="card-body">
+
+            <form [formGroup]="autoAddForm">
+
+
+
+               
+                <div class="mb-3 row">
+                    <label for="datum" class="col-sm-2 col-form-label"> Datum: <span class="text-danger">*</span></label>
+                    <div class="col-sm-10">
+                        <input type="date" id="carName" [ngModel]="cena.datum" formControlName="datum" class="form-control" />
+                    </div>
+                </div>
+
+                <div class="mb-3 row">
+                    <label for="cena" class="col-sm-2 col-form-label">Cena: <span class="text-danger">*</span></label>
+                    <div class="col-sm-10">
+                        <input type="text" id="modelYear" [ngModel]="cena.cena" formControlName="cena" class="form-control" />
+                    </div>
+                </div>
+                <div class="mb-3 row">
+                    <label for="colorId" class="col-sm-2 col-form-label">Model automobila: <span class="text-danger">*</span></label>
+                    <div class="col-sm-10">
+                        <select class="form-control" [ngModel]="cena.idModelAutomobila" formControlName="idModelAutomobila">
+                            <option *ngFor="let item of ListaModela" value="{{item.idModelAutomobila}}">
+                                Naziv {{item.naziv}};&nbsp;
+                             
+
+                            </option>
+                        </select>
+                    </div>
+                </div>
+             
+                <input type="hidden" formControlName="idCena" [ngModel]="cena.idCena">
+               
+            </form>
+
+        </div>
+
+        <div class="card-footer text-center">
+            <button type="button" (click)="addCena()"  *ngIf="cena.idCena==0"
+                class="btn btn-primary">Dodaj</button>
+            <button type="button" (click)="izmeniCenu()" *ngIf="cena.idCena!=0"
+                class="btn btn-primary">Izmeni</button>
+        </div>
+
+    </div>
+</div>

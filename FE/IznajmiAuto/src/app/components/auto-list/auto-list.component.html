@@ -1,0 +1,51 @@
+<div style="margin-top: 80px;">
+  <div class="input-group d-flex justify-content-left ">
+    <div class="form-outline">
+        <input type="search" id="form1" class="form-control" [(ngModel)]="filterTerm" placeholder="Pretraga..."
+            style="width: 350px;" />
+  
+    </div>
+  </div>
+  <div class="row">
+      <div class="col-md-12" style="text-align:right">
+    
+        <button routerLink="/auto/dodaj-auto" class="btn btn-success" style="border-radius: 50px; width: 150px;">Add Car</button>
+    
+      </div>
+      <div class="col-md-12">
+    
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">Car Id</th>
+              <th scope="col">Car Name</th>
+              <th scope="col">Brand Name</th>
+              <th scope="col">Color Name</th>
+              <th scope="col">Model Year</th>
+              <th scope="col">Daily Price</th>
+              <th scope="col">Car Description</th>
+              <th scope="col"></th>
+              <th scope="col"></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of automobili | filter: filterTerm">
+              <td>{{item.nazivProizvodjaca}}</td>
+              <td>{{item.nazivModela}}</td>
+              <td>{{item.brojRegistracije}}</td>
+              <td>{{item.boja}}</td>
+              <td>{{item.dostupan}}</td>
+              <td>{{item.rezervisan}}</td>
+              <td>{{item.godiste}}</td>
+              <td>{{item.cena}}</td>
+              <td><button routerLink="/auto/update/{{item.idAutomobil}}" class="btn btn-warning" style="border-radius: 50px;">Update</button></td>
+              <td><button (click)="deleteAuto(item)" class="btn btn-danger" style="border-radius: 50px;">Delete</button></td>
+            </tr>
+          </tbody>
+        </table>
+    
+      </div>
+    </div>
+    
+    
+</div>

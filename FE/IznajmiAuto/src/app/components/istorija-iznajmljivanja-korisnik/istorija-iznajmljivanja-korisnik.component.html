@@ -1,0 +1,62 @@
+<app-navbar-korisnik></app-navbar-korisnik>
+<div style="margin-top: 80px;">
+    <!-- <h4>{{title}}</h4> -->
+
+    <div class="row" *ngIf="ListIstorijaDetail.length == 0">
+        <div class="col-md-12">
+            <div class="alert alert-danger">
+                Nema podataka za prikaz
+            </div>
+        </div>
+    </div>
+    <div class="input-group d-flex justify-content-end ">
+        <div class="form-outline">
+            <input type="search" id="form1" class="form-control" [(ngModel)]="filterTerm" placeholder="Pretraga..."
+                style="width: 350px;" />
+    
+        </div>
+    </div>
+    
+    <div class="row text-center" *ngIf="dataLoaded==true">
+        <table class="table table-striped mt-5">
+            <thead class="">
+                <tr>
+                    <!--<th>Stanica Id</th>-->
+                    <th style="display: none;">Id</th>
+                    
+                    <th>Automobil</th>
+    
+                    <th>Ime</th>
+                    <th>Prezime</th>
+                    <th>Datum vraćanja</th>
+                    <th>Cena po danu</th>
+                    <th>Vraćen</th>
+    
+    
+    
+    
+                    <th></th>
+    
+    
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of ListIstorijaDetail | filter: filterTerm">
+    
+                    <td style="display: none;">{{item.idIstorija}}</td>
+                    <td>{{item.nazivProizvodjaca}} - {{item.nazivModela}}</td>
+                 
+                    <td>{{item.ime}} </td>
+                    <td>{{item.prezime}} </td>
+                    <td>{{item.datumVracanja}} </td>
+                    <td>{{item.cena}} </td>
+                    <td><button  class="btn btn-{{item.vracen==true? 'success':'danger'}} w-100">
+                            {{item.vracen==true?"Da":"Ne"}}</button> </td>
+    
+    
+                    
+                </tr>
+            </tbody>
+        </table>
+    
+    </div></div>

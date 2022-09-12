@@ -1,0 +1,44 @@
+
+<div class="col-md-12">
+    <div class="card">
+
+        <!--  <div class="card-header">
+            <h5 class="card-title text-center">Dodaj auto</h5>
+        </div> -->
+
+        <div class="card-body">
+
+            <form [formGroup]="autoAddForm">
+
+
+
+               
+                <div class="mb-3 row">
+                    <label for="carName" class="col-sm-2 col-form-label"> Naziv proizvođača: <span class="text-danger">*</span></label>
+                    <div class="col-sm-10">
+                        <input type="text" id="naziv" [ngModel]="proizvodjacAutomobila.naziv" formControlName="naziv" class="form-control" />
+                    </div>
+                </div>
+
+                <div class="mb-3 row">
+                    <label for="modelYear" class="col-sm-2 col-form-label">Država: <span class="text-danger">*</span></label>
+                    <div class="col-sm-10">
+                        <input type="text" id="modelYear" [ngModel]="proizvodjacAutomobila.drzava" formControlName="drzava" class="form-control" />
+                    </div>
+                </div>
+             
+                <input type="hidden" formControlName="idProizvodjacAutomobila" [ngModel]="proizvodjacAutomobila.idProizvodjacAutomobila">
+
+            </form>
+
+        </div>
+
+        <div class="card-footer text-center">
+            <button type="button" (click)="addProizvodjacaAuta()"  *ngIf="proizvodjacAutomobila.idProizvodjacAutomobila==0"
+                class="btn btn-primary">Dodaj</button>
+            <button type="button" (click)="izmeniProizvodjacaAuta()" *ngIf="proizvodjacAutomobila.idProizvodjacAutomobila!=0"
+                class="btn btn-primary">Izmeni</button>
+        </div>
+
+    </div>
+</div>

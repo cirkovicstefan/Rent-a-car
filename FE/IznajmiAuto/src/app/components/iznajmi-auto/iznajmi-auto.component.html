@@ -1,0 +1,96 @@
+<div style="margin-top: 80px;">
+    <div class="col-md-12">
+        <div class="card" style="width:auto ;">
+    
+            <div class="card-header">
+                <h5 class="card-title text-center">Iznajmi auto</h5>
+            </div>
+    
+            <div class="card-body">
+    
+                <form [formGroup]="iznajmiAddForm" >
+    
+    
+    
+                    <div class="mb-3 row">
+                        <label for="colorId" class="col-sm-2 col-form-label">Automobil: <span class="text-danger">*</span></label>
+                        <div class="col-sm-10">
+                            <input type="hidden" name="" class="form-control" formControlName="idAutomobila" *ngFor="let item of autoDetails" [ngModel]="item.idAutomobil">
+                            <select class="form-control" [disabled]="true">
+                                <option *ngFor="let item of autoDetails">
+                                 {{item.nazivProizvodjaca}} - {{item.nazivModela}}
+                                </option>
+                            </select>
+                        </div>
+                    </div>
+    
+                    <input type="hidden" name="" formControlName="idModelAutomobila" *ngFor="let item of autoDetails"  [ngModel]="item.idModelAutomobila">
+    
+                    <div class="mb-3 row">
+                        <label for="colorId" class="col-sm-2 col-form-label">Odaberite klijenta:  <span class="text-danger">*</span></label>
+                        <div class="col-sm-10">
+                            <select class="form-control" formControlName="idKorisnika" >
+                                <option *ngFor="let item of klijenti"  [ngValue]="item.idKorisnika">
+                                 {{item.ime}} - {{item.prezime}} - {{item.jmbg}}
+                                </option>
+                            </select>
+                        </div>
+                    </div>
+    
+                    <div class="mb-3 row">
+                        <label for="iznajmljivanjeOd" class="col-sm-2 col-form-label">Iznajmljivanje od:  <span class="text-danger">*</span></label>
+                        <div class="col-sm-10">
+                            <input id="iznajmljivanjeOd" class="form-control" type="date" placeholder="dd/mm/yyyy" value="" min="1930-01-01" max="2030-12-31"  name="" id="" formControlName="iznajmljivanjeOd">
+                        </div>
+                    </div>
+                    <div class="mb-3 row">
+                        <label for="iznajmljivanjeDo" class="col-sm-2 col-form-label">Iznajmljivanje do:  <span class="text-danger">*</span></label>
+                        <div class="col-sm-10">
+                            <input id="iznajmljivanjeDo" (input)="cena()"  class="form-control" type="date" placeholder="dd/mm/yyyy" value="" min="1930-01-01" max="2030-12-31"  name="" id="" formControlName="iznajmljivanjeDo">
+                        </div>
+                    </div>
+                    <div class="mb-3 row">
+                        <label for="nacinPlacanja" class="col-sm-2 col-form-label">Način plaćanja: <span class="text-danger">*</span></label>
+                        <div class="col-sm-10">
+                            <select name="nacinPlacanja"  id="" formControlName="nacinPlacanja" class="col-sm-4 mb-1 form-control" required>
+                                <option ></option>
+                                <option >Keš</option>
+                                <option >Kartica</option>
+                    
+                            </select>
+                           
+                        </div>
+                    </div>
+    
+                    <div class="mb-3 row">
+                        <label for="cena_po_danu" class="col-sm-2 col-form-label">Cena po danu <span class="text-danger">*</span></label>
+                        <div class="col-sm-10">
+                            <input type="text" id="cena_po_danu" formControlName="cena_po_danu" value="{{CenaNajnovija}}" class="form-control"   />
+                        </div>
+                    </div>
+                    <div class="mb-3 row">
+                        <label for="email" class="col-sm-2 col-form-label">Ukupna cena <span class="text-danger">*</span></label>
+                        <div class="col-sm-10">
+                            <input type="text" id="uk_cena" formControlName="cena" value="{{UkupnaCena}}" class="form-control"   />
+                        </div>
+                    </div>
+                    <div class="mb-3 row">
+                        <label for="email" class="col-sm-2 col-form-label">Broj dana <span class="text-danger">*</span></label>
+                        <div class="col-sm-10">
+                            <input type="text" id="brojDana"  formControlName="broj_dana" value="{{BrojDana}}" class="form-control"   />
+                        </div>
+                    </div>
+    
+                    <input type="hidden" name="" formControlName="idCena" [ngModel]="IdCena">
+             
+    
+                </form>
+    
+            </div>
+    
+            <div class="card-footer text-center">
+                <button class="btn btn-success px-5" (click)="Iznajmi()">Iznajmi</button>
+            </div>
+    
+        </div>
+    </div></div>

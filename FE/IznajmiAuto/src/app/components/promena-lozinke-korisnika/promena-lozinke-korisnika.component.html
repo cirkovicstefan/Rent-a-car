@@ -1,0 +1,49 @@
+
+<app-navbar-korisnik></app-navbar-korisnik>
+<div style="margin-top: 80px;">
+<div class="row">
+    <div class="col-md-6">
+        <div class="card">
+    
+     
+    
+            <div class="card-body">
+    
+                <form [formGroup]="korisnikAddForm">
+    
+    
+    
+                   
+                    <div class="mb-3 row">
+                        <label for="ime" class="col-sm-3 col-form-label"> Trenutna lozinka: <span class="text-danger">*</span></label>
+                        <div class="col-sm-9">
+                            <input type="password" id="ime"  formControlName="trenutnaLozinka" class="form-control" />
+                        </div>
+                    </div>
+    
+                    <div class="mb-3 row">
+                        <label for="prezime" class="col-sm-3 col-form-label">Nova lozinka: <span class="text-danger">*</span></label>
+                        <div class="col-sm-9">
+                            <input type="password" id="modelYear"  formControlName="novaLozinka" class="form-control" />
+                        </div>
+                    </div>
+    
+              
+                 
+                    <!-- <input type="hidden" formControlName="id" [ngModel]="korisnik.id"> -->
+    
+                </form>
+    
+            </div>
+    
+            <div class="card-footer text-center">
+                <button type="button" (click)="promeniLozinku()"  
+                    class="btn btn-primary">Promeni lozinku</button>
+             
+            </div>
+    
+        </div>
+    </div>
+<div class="col-md-6"></div>
+</div>
+</div>

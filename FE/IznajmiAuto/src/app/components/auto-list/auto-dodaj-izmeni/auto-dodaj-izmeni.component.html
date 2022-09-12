@@ -1,0 +1,75 @@
+<div class="col-md-12">
+    <div class="card">
+
+       
+
+        <div class="card-body">
+
+            <form [formGroup]="autoAddForm" >
+
+
+
+                <div class="mb-3 row">
+                    <label for="colorId" class="col-sm-2 col-form-label">Odaberite model: <span class="text-danger">*</span></label>
+                    <div class="col-sm-10">
+                        <select class="form-control" [ngModel]="auto.idModelAutomobila" formControlName="idModelAutomobila">
+                            <option *ngFor="let item of ListaModela" value="{{item.idModelAutomobila}}">
+                                {{item.naziv}}
+                            </option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="mb-3 row">
+                    <label for="carName" class="col-sm-2 col-form-label">Registraciski broj: <span class="text-danger">*</span></label>
+                    <div class="col-sm-10">
+                        <input type="text" id="carName" [ngModel]="auto.brojRegistracije" formControlName="brojRegistracije" class="form-control" />
+                    </div>
+                </div>
+
+                <div class="mb-3 row">
+                    <label for="modelYear" class="col-sm-2 col-form-label">Boja: <span class="text-danger">*</span></label>
+                    <div class="col-sm-10">
+                        <input type="text" id="modelYear" [ngModel]="auto.boja" formControlName="boja" class="form-control" />
+                    </div>
+                </div>
+
+                <div class="mb-3 row">
+                    
+                    <label for="" class="col-sm-2 col-form-label">Dostupan: <span class="text-danger">*</span></label>
+                    <div class="col-sm-10">
+                        <select class="form-control" [ngModel]="auto.dostupan" formControlName="dostupan">
+                           <option [ngValue]="true">Da</option>
+                           <option [ngValue]="false">Ne</option>
+                        </select>
+                    </div>
+                   
+                </div>
+
+                <div class="mb-3 row">
+                    <label for="" class="col-sm-2 col-form-label">Rezervisan: <span class="text-danger">*</span></label>
+                    <div class="col-sm-10">
+                        <select class="form-control" [ngModel]="auto.rezervisan" formControlName="rezervisan">
+                           <option [ngValue]="true">Da</option>
+                           <option [ngValue]="false">Ne</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="mb-3 row">
+                    <label for="description" class="col-sm-2 col-form-label">Godište: <span class="text-danger">*</span></label>
+                    <div class="col-sm-10">
+                        <input type="number" id="godiste" [ngModel]="auto.godiste" formControlName="godiste" class="form-control" />
+                    </div>
+                </div>
+                <input type="hidden" formControlName="idAutomobil" [ngModel]="auto.idAutomobil">
+            </form>
+
+        </div>
+
+        <div class="card-footer text-center">
+            <button class="btn btn-success px-5" (click)="addAuto()" *ngIf="auto.idAutomobil==0">Dodaj</button>
+            <button class="btn btn-success px-5" (click)="updateAuto()" *ngIf="auto.idAutomobil!=0">Izmeni</button>
+        </div>
+
+    </div>
+</div>

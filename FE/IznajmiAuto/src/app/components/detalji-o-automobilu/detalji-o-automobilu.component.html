@@ -1,0 +1,99 @@
+<div style="margin-top: 80px;">
+  <div class="row">
+    <div class="col-md-6">
+      <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <span *ngFor="let carDetail of autoDetails">
+            <div *ngFor="let img of carDetail.slikaPutanje; index as i" [ngClass]="setCarouselClassName(i)">
+
+              <img class="d-block w-100" src="http://127.0.0.1:8887/{{img.putanjaSlike}}">
+
+            </div>
+          </span>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+          data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+          data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+    <div class="col-md-6">
+
+      <div class="row">
+
+        <div class="card" style="width: 700px;">
+          <h5 class="card-header">Opšte informacije</h5>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-md-6 ">
+
+
+
+                <ul *ngFor="let item of autoDetails" class="list-group list-group-flush">
+                  <li class="list-group-item">Proizvodjač <span
+                      style="font-weight: 700; float:right ;">{{item.nazivProizvodjaca}}</span></li>
+                  <li class="list-group-item">Model<span
+                      style="font-weight: 700; float:right ;">{{item.nazivModela}}</span></li>
+                  <li class="list-group-item">Broj registracije<span
+                      style="font-weight: 700; float:right ;">{{item.brojRegistracije}}</span></li>
+                  <li class="list-group-item">Boja<span style="font-weight: 700; float:right ;">{{item.boja}}</span>
+                  </li>
+                  <li class="list-group-item">Dostupan<span style="font-weight: 700; float:right ;"> <button
+                        class="btn btn-{{item.dostupan==true? 'success':'danger'}}">
+                        {{item.dostupan==true?"Da":"Ne"}}</button></span></li>
+                  <li class="list-group-item">Rezervisan<span style="font-weight: 700; float:right ;">
+
+                      <button class="btn btn-{{item.rezervisan==true? 'success':'danger'}}">
+                        {{item.rezervisan==true?"Da":"Ne"}}</button>
+
+                    </span></li>
+
+
+                </ul>
+              </div>
+              <div class="col-md-6">
+                <ul *ngFor="let item of autoDetails" class="list-group list-group-flush">
+                  <li class="list-group-item">Godište<span
+                      style="font-weight: 700; float:right ;">{{item.godiste}}</span>
+                  </li>
+                  <li class="list-group-item">Cena po danu<span
+                      style="font-weight: 700; float:right ;">{{item.cena}}</span></li>
+                  <li class="list-group-item">Gorivo <span
+                      style="font-weight: 700; float:right ;">{{item.gorivo}}</span>
+                  </li>
+                  <li class="list-group-item">Kubikaža<span
+                      style="font-weight: 700; float:right ;">{{item.kubikaza}}</span></li>
+                  <li class="list-group-item">Broj sedišta<span
+                      style="font-weight: 700; float:right ;">{{item.brojSedista}}</span></li>
+                  <li class="list-group-item">Menjač<span style="font-weight: 700; float:right ;">{{item.menjac}}</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+          </div>
+          <span *ngIf="IdRole==1">
+            <div class="card-footer text-center" *ngFor="let item of autoDetails">
+              <button class="btn btn-success px-5" routerLink="/iznajmi-auto/{{item.idAutomobil}}">Iznajmi</button>
+            </div>
+          </span>
+          <span *ngIf="IdRole==2">
+            <div class="card-footer text-center" *ngFor="let item of autoDetails">
+              <button class="btn btn-success px-5" routerLink="/rezervisi-automobil/{{item.idAutomobil}}">Rezerviši</button>
+            </div>
+          </span>
+          
+
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</div>

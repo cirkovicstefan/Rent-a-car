@@ -1,0 +1,86 @@
+<app-navbar-gost></app-navbar-gost>
+
+<div style="margin-top: 80px;">
+  <main class="form-register">
+    <form [formGroup]="registerForm" class="border rounded p-5">
+      <h1 class="h3 mb-3 fw-normal text-center">Registracija</h1>
+  
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form-group my-3">
+            <label for="ime">Ime
+              <span class="text-danger">*</span>
+            </label>
+            <input class="form-control" formControlName="ime" type="firstName" id="ime" placeholder="" />
+          </div>
+  
+        </div>
+        <div class="col-md-6">
+          <div class="form-group my-3">
+            <label for="prezime">Prezime
+              <span class="text-danger">*</span>
+            </label>
+            <input class="form-control" formControlName="prezime" type="prezime" id="prezime" placeholder="" />
+          </div>
+        </div>
+      </div>
+  
+  
+      <div class="form-group my-3">
+        <label for="prezime">E-mail
+          <span class="text-danger">*</span>
+        </label>
+        <input class="form-control" formControlName="email" type="email" id="email" placeholder="" />
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form-group my-3">
+            <label for="prezime">JMBG
+              <span class="text-danger">*</span>
+            </label>
+            <input class="form-control" formControlName="jmbg" type="text" id="jmbg" placeholder="" />
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="form-group my-3">
+            <label for="prezime">Broj telefona
+              <span class="text-danger">*</span>
+            </label>
+            <input class="form-control" formControlName="brojTelefona" type="text" id="brojTelefona" placeholder="" />
+          </div>
+        </div>
+  
+      </div>
+  
+  
+      <div class="row">
+        <div class="col-md-12">
+          <div class="form-group my-3">
+            <label for="prezime">Lozinka
+              <span class="text-danger">*</span>
+            </label>
+            <input class="form-control" formControlName="lozinka" type="password" id="lozinka" placeholder="" />
+          </div>
+  
+        </div>
+        <!-- <div class="col-md-6">
+          <div class="form-group my-3">
+            <label for="prezime">Naziv
+              <span class="text-danger">*</span>
+            </label>
+            <input class="form-control" formControlName="nazivUloge" type="text" id="nazivUloge" placeholder="" />
+          </div>
+        </div>-->
+      </div> 
+  
+  
+  
+      <button class="w-100 btn btn-success" (click)="register()">
+        Registracija
+      </button>
+  
+    </form>
+  
+  
+  
+  </main></div>
