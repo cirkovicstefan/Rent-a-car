@@ -9,7 +9,7 @@ ER Diagram of database:
 C# was used in the back-end part of the project. Development was made on the basis of multi-layered architecture.
 
 
-![]([https://github.com/cirkovicstefan/Rent-a-car/blob/main/app_images/dijagram/sema.png](https://github.com/cirkovicstefan/Rent-a-car/blob/main/app_images/dijagram/Picture1.png)
+![](https://github.com/cirkovicstefan/Rent-a-car/blob/main/app_images/dijagram/Picture1.png)
 
 # Front-End
 
@@ -19,3 +19,14 @@ Role guest
 ![](https://github.com/cirkovicstefan/Rent-a-car/blob/main/app_images/uloga%20gost/gost-prikaz.png)
 
 ![](https://github.com/cirkovicstefan/Rent-a-car/blob/main/app_images/uloga%20gost/registracija.png)
+
+Role client
+
+![](https://github.com/cirkovicstefan/Rent-a-car/blob/main/app_images/uloga%20klijent/stranica-za-ulogu-korisnici.png)
+
+![](https://github.com/cirkovicstefan/Rent-a-car/blob/main/app_images/uloga%20klijent/korisnici-istorija.png)
+
+![](https://github.com/cirkovicstefan/Rent-a-car/blob/main/app_images/uloga%20klijent/korisnici-profil.png)
+
+![](https://github.com/cirkovicstefan/Rent-a-car/blob/main/app_images/uloga%20klijent/promena-lozinke.png)
+![](https://github.com/cirkovicstefan/Rent-a-car/blob/main/app_images/uloga%20klijent/uloga-korisnici-rezervisani.png)
