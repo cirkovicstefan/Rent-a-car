@@ -30,3 +30,27 @@ Role client
 
 ![](https://github.com/cirkovicstefan/Rent-a-car/blob/main/app_images/uloga%20klijent/promena-lozinke.png)
 ![](https://github.com/cirkovicstefan/Rent-a-car/blob/main/app_images/uloga%20klijent/uloga-korisnici-rezervisani.png)
+
+Role admin
+![](https://github.com/cirkovicstefan/Rent-a-car/blob/main/app_images/uloga%20administrator/slika-iznajmljivanje.png)
+![](https://github.com/cirkovicstefan/Rent-a-car/blob/main/app_images/uloga%20administrator/vise-o-automobilu.png)
+![](https://github.com/cirkovicstefan/Rent-a-car/blob/main/app_images/uloga%20administrator/dodaj-model-forma.png)
+![](https://github.com/cirkovicstefan/Rent-a-car/blob/main/app_images/uloga%20administrator/dodaj-novu-cenu.png)
+![](https://github.com/cirkovicstefan/Rent-a-car/blob/main/app_images/uloga%20administrator/dodaj-proizvodjaca.png)
+![](https://github.com/cirkovicstefan/Rent-a-car/blob/main/app_images/uloga%20administrator/dodaj-rezervaciju.png)
+![](https://github.com/cirkovicstefan/Rent-a-car/blob/main/app_images/uloga%20administrator/dodavanje-korisnika.png)
+![](https://github.com/cirkovicstefan/Rent-a-car/blob/main/app_images/uloga%20administrator/istorija.png)
+![](https://github.com/cirkovicstefan/Rent-a-car/blob/main/app_images/uloga%20administrator/izmeni-cenu.png)
+![](https://github.com/cirkovicstefan/Rent-a-car/blob/main/app_images/uloga%20administrator/izmeni-klijenta.png)
+![](https://github.com/cirkovicstefan/Rent-a-car/blob/main/app_images/uloga%20administrator/izmeni-model.png)
+![](https://github.com/cirkovicstefan/Rent-a-car/blob/main/app_images/uloga%20administrator/izmeni-proizvodjaca.png)
+![](https://github.com/cirkovicstefan/Rent-a-car/blob/main/app_images/uloga%20administrator/iznajmi-forma.png)
+![](https://github.com/cirkovicstefan/Rent-a-car/blob/main/app_images/uloga%20administrator/iznajmljeni-prikaz.png)
+![](https://github.com/cirkovicstefan/Rent-a-car/blob/main/app_images/uloga%20administrator/model-automobila-prikay.png)
+![](https://github.com/cirkovicstefan/Rent-a-car/blob/main/app_images/uloga%20administrator/prikaz-finansija.png)
+![](https://github.com/cirkovicstefan/Rent-a-car/blob/main/app_images/uloga%20administrator/prikaz-korisnika.png)
+![](https://github.com/cirkovicstefan/Rent-a-car/blob/main/app_images/uloga%20administrator/prikaz-proizvodjaca.png)
+![](https://github.com/cirkovicstefan/Rent-a-car/blob/main/app_images/uloga%20administrator/promena-lozinke.png)
+
+
+
